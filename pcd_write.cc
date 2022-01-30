@@ -18,7 +18,7 @@ int main()
         point.z = 1024 * rand() / (RAND_MAX + 1.0f);
     }
 
-    pcl::io::savePCDFileASCII("test_pcd.pcd", cloud);
+    pcl::io::savePCDFile("test_pcd.pcd", cloud);
     std::cerr << "Saved " << cloud.size() << " data points to test_pcd.pcd.\n";
 
     for (const auto &point : cloud)
